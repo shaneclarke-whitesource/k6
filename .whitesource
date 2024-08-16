@@ -4,6 +4,14 @@
     "configExternalURL": "",
     "projectToken": "",
     "baseBranches": []
+},
+  "scanSettings": {
+    "enableIaC": true,
+    "baseBranches": ["integration"]
+  },
+  "checkRunSettings": {
+    "useMendCheckNames": true,
+    "iacCheckRunConclusionLevel": "failure"
   },
   "scanSettingsSAST": {
     "enableScan": true,
@@ -32,7 +40,16 @@
   "remediateSettings": {
     "workflowRules": {
       "enabled": true
-    }
+    },
+    "enableRenovate": true,
+    "extends": [
+       "config:base",
+       "mergeConfidence:all-badges",
+       "github>mend-toolkit/mend-examples//Repo-Integration/Renovate/smart-merge"
+      ]
+  },
+  "leastVulnerablePackageSettings": {
+    "enabled": true
   },
    "imageSettings":{
        "imageTracing":{
