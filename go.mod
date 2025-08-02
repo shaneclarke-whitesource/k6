@@ -1,6 +1,8 @@
 module go.k6.io/k6
 
-go 1.20
+go 1.23.0
+
+toolchain go1.24.5
 
 require (
 	github.com/Azure/go-ntlmssp v0.0.0-20221128193559-754e69321358
@@ -47,7 +49,7 @@ require (
 	go.opentelemetry.io/otel/trace v1.24.0
 	go.uber.org/goleak v1.3.0
 	golang.org/x/crypto v0.25.0
-	golang.org/x/crypto/x509roots/fallback v0.0.0-20240709155400-d66d9c31b4ae
+	golang.org/x/crypto/x509roots/fallback v0.0.0-20250801154422-1fda73153fee
 	golang.org/x/net v0.27.0
 	golang.org/x/term v0.22.0
 	golang.org/x/time v0.5.0
